@@ -1,0 +1,29 @@
+body{
+        background-color: black;
+        text-align: center;
+    color: white;
+    }
+.Header {
+    text-align: center;
+    color: blueviolet;
+    text-decoration: underline;
+    font-size:60px;
+
+}
+#Header2{
+    text-align:center;
+    color: blueviolet;
+    text-decoration: underline;
+    font-size: 40px;
+}
+.p{
+    text-align: center;
+    color: white;
+    font-family: "Poller One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.img{
+    text-align: center;
+    border-radius: 50%;
+}
