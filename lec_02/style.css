@@ -1,0 +1,68 @@
+body{
+    background-color: black;
+}
+.container1{
+    text-align: left;
+    float: right;
+    color:white;
+    margin:70px ;
+    padding: 50px;
+    border-radius: 100px;
+    border: 5px solid white;
+    width:30%;
+    height: 25%;
+}
+.container2{
+    text-align: left;
+    float: left;
+    color:white;
+    margin:70px ;
+    padding: 50px;
+    border-radius: 100px;
+    border: 5px solid white;
+    width:30%;
+    height: 25%;   
+}
+.container3{
+    text-align: center;
+    float: left;
+    color:white;
+    margin:70px ;
+    padding: 50px;
+    border-radius: 100px;
+    border: 5px solid white;
+    width:30%;
+    height: 25%;   
+}
+.container4{
+    
+    text-align: center;
+    float: right;
+    color:white;
+    margin:70px ;
+    padding: 50px;
+    border-radius: 100px;
+    border: 5px solid white;
+    width:30%;
+    height: 25%;   
+}
+#first{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: coral;
+    text-transform: capitalize;
+}
+#sec{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: coral;
+    text-transform: capitalize;
+}
+#third{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: coral;
+    text-transform: capitalize;
+}
+#fourth{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: coral;
+    text-transform: capitalize;
+}
