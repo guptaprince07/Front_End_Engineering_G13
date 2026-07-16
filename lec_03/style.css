@@ -1,0 +1,51 @@
+body{
+    background-color:black;
+    padding-top:130px;
+    margin-top:100px
+
+}
+.header1{
+    color:white;
+    text-align:center;
+    border:5px solid yellow;
+    border-radius: 30px;
+    padding-top:30px;
+    margin-bottom:30px;
+    font-size: 30px;
+    font-family:"Montenegrin Gothic One", serif;
+}
+.header2{
+    color:white;
+    text-align:center;
+    border:5px solid yellow;
+    border-radius: 30px;
+    padding-top:30px;
+    margin-bottom:30px;
+    font-family:"Montenegrin Gothic One", serif;
+}
+
+.header3{
+    color:white;
+    text-align:center;
+    border:5px solid yellow;
+    border-radius: 30px;
+    padding-top:30px;
+    font-family:"Montenegrin Gothic One", serif;
+}
+
+.btn{
+    background: blue;
+    color: blueviolet;
+    text-align: center;
+    border: blue 5px solid;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    font-size: 25px;
+    float: right;
+    margin-top: 100px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn.hover{
+    
+}
