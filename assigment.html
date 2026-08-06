@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative; 
+            width: 400px;
+            height: 600px;
+            border: 3px solid black;
+            background-image: url(https://th.bing.com/th/id/OIGP.90plJIRWoTQ1wngkWXnL?w=228&h=228&c=6&r=0&o=7&dpr=1.3&pid=1.7&rm=3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin:  auto;
+            color: white; 
+            
+        }
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        .top-left {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .top-right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .bottom-left {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+        .bottom-right {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bottom-left">Bottom left</div>
+        <div class="top-left">Top Left</div>
+        <div class ="top-right">Top-Right</div>
+        <div class="bottom-right">Bottom right</div>
+        <div class ="centered">Centered</div>
+    </div>
+</body>
+</html>
