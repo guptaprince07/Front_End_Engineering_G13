@@ -1,90 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* .box-1{
-            width:100px;
-            height:100px;
-            border: 2px solid black;
-        }
-        .sbox1{
-            width: 10px;
-            height: 10px;
-            border:2px solid black;
-            
-        }
-        .box-2{
-            width:100px;
-            height:100px;
-            border: 2px solid black;
-        }
-        .sbox2{
-            width: 10px;
-            height: 10px;
-            border:2px solid black;
-        } */
-         textncheck>label{
-            position: relative;
-            top: 85px;
-            left:35px;
-         }
-         textncheck>.red-color{
-            position: relative;
-            top: 50px;
-            left: 38px;
-         }
-         .redbox{
-            border: 1px solid black;
-            width: 100px;
-            height: 100px;
-         }
-         red-color:checked~.redbox{
-            background-color: red;
-         }
-        
 
-         textncheck1>label{
-            position: relative;
-            top: 85px;
-            left:35px;
-         }
-         textncheck>.green-color{
-            position: relative;
-            top: 50px;
-            left: 38px;
-         }
-         .greenbox{
-            border: 1px solid black;
-            width: 100px;
-            height: 100px;
-         }
-         green-color:checked~.grrenbox{
-            background-color: green;
-         }
-    </style>
+<style>
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#f2f2f2;
+}
+
+
+.container{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+
+
+.row{
+    display:flex;
+    gap:25px;
+}
+
+
+input{
+    display:none;
+}
+
+.box{
+    width:180px;
+    height:180px;
+    border:3px solid black;
+    background:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+
+.mini-box{
+    width:35px;
+    height:35px;
+    border:2px solid black;
+    margin-bottom:8px;
+}
+
+span{
+    font-size:13px;
+}
+
+#red1:checked + .box,
+#red2:checked + .box,
+#red3:checked + .box{
+    background:red;
+}
+
+#green1:checked + .box,
+#green2:checked + .box,
+#green3:checked + .box{
+    background:green;
+}
+
+
+input:checked + .box .mini-box,
+input:checked + .box span{
+    display:none;
+}
+</style>
 </head>
 <body>
-    <!-- <div class="box-1">Red
-        <div class="sbox1"></div>
-    </div>
-    <div class="box-2">Green
-        <div class="sbox2"></div>
-    </div> -->
-    <div class="textncheck">
-        <label>Red</label><br>
-        <input type="checkbox" class="red-color">
-        <div class="redbox"></div>
-    </div>
-    <div></div>
+<div class="container">
 
-    <div class="textncheck1">
-        <label>Green</label><br>
-        <input type="checkbox" class="green-color">
-        <div class="greenbox"></div>
-    </div>
-    <div></div>
+
+<div class="row">
+
+<input type="checkbox" id="red1">
+<label class="box" for="red1">
+    <div class="mini-box"></div>
+    <span>red</span>
+</label>
+
+
+<input type="checkbox" id="red2">
+<label class="box" for="red2">
+    <div class="mini-box"></div>
+    <span>red</span>
+</label>
+
+
+<input type="checkbox" id="red3">
+<label class="box" for="red3">
+    <div class="mini-box"></div>
+    <span>red</span>
+</label>
+
+</div>
+
+<div class="row">
+
+<input type="checkbox" id="green1">
+<label class="box" for="green1">
+    <div class="mini-box"></div>
+    <span>green</span>
+</label>
+<input type="checkbox" id="green2">
+<label class="box" for="green2">
+    <div class="mini-box"></div>
+    <span>green</span>
+</label>
+<input type="checkbox" id="green3">
+<label class="box" for="green3">
+    <div class="mini-box"></div>
+    <span>green</span>
+</label>
+</div>
+</div>
 </body>
 </html>
