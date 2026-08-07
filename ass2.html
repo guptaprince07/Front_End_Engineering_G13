@@ -10,22 +10,18 @@ body{
     align-items:center;
     height:100vh;
     background:#f2f2f2;
+    margin: 0;
 }
+
 .container{
     display:flex;
     flex-direction:column;
     gap:40px;
 }
 
-
 .row{
     display:flex;
     gap:25px;
-}
-
-
-input{
-    display:none;
 }
 
 .box{
@@ -37,85 +33,78 @@ input{
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    cursor:pointer;
+    transition: background 0.2s ease;
 }
 
-.mini-box{
-    width:35px;
-    height:35px;
-    border:2px solid black;
-    margin-bottom:8px;
+.checkbox-input {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 8px;
+    cursor: pointer;
 }
 
-span{
-    font-size:13px;
+.box label {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.box:has(.checkbox-input:checked) .checkbox-input,
+.box:has(.checkbox-input:checked) label {
+    display: none;
+}
+.box:has(#red1:checked),
+.box:has(#red2:checked),
+.box:has(#red3:checked) {
+    background: red;
 }
 
-#red1:checked + .box,
-#red2:checked + .box,
-#red3:checked + .box{
-    background:red;
+.box:has(#green1:checked),
+.box:has(#green2:checked),
+.box:has(#green3:checked) {
+    background: green;
 }
 
-#green1:checked + .box,
-#green2:checked + .box,
-#green3:checked + .box{
-    background:green;
-}
-
-
-input:checked + .box .mini-box,
-input:checked + .box span{
-    display:none;
-}
 </style>
 </head>
 <body>
+
 <div class="container">
 
+    <div class="row">
+        <div class="box">
+            <input type="checkbox" id="red1" class="checkbox-input">
+            <label for="red1">Red</label>
+        </div>
 
-<div class="row">
+        <div class="box">
+            <input type="checkbox" id="red2" class="checkbox-input">
+            <label for="red2">Red</label>
+        </div>
 
-<input type="checkbox" id="red1">
-<label class="box" for="red1">
-    <div class="mini-box"></div>
-    <span>Red</span>
-</label>
+        <div class="box">
+            <input type="checkbox" id="red3" class="checkbox-input">
+            <label for="red3">Red</label>
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="box">
+            <input type="checkbox" id="green1" class="checkbox-input">
+            <label for="green1">Green</label>
+        </div>
 
-<input type="checkbox" id="red2">
-<label class="box" for="red2">
-    <div class="mini-box"></div>
-    <span>Red</span>
-</label>
+        <div class="box">
+            <input type="checkbox" id="green2" class="checkbox-input">
+            <label for="green2">Green</label>
+        </div>
 
-
-<input type="checkbox" id="red3">
-<label class="box" for="red3">
-    <div class="mini-box"></div>
-    <span>Red</span>
-</label>
+        <div class="box">
+            <input type="checkbox" id="green3" class="checkbox-input">
+            <label for="green3">Green</label>
+        </div>
+    </div>
 
 </div>
 
-<div class="row">
-
-<input type="checkbox" id="green1">
-<label class="box" for="green1">
-    <div class="mini-box"></div>
-    <span>Green</span>
-</label>
-<input type="checkbox" id="green2">
-<label class="box" for="green2">
-    <div class="mini-box"></div>
-    <span>Green</span>
-</label>
-<input type="checkbox" id="green3">
-<label class="box" for="green3">
-    <div class="mini-box"></div>
-    <span>Green</span>
-</label>
-</div>
-</div>
 </body>
 </html>
