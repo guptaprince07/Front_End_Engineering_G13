@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chess Board</title>
     <style>
-        /* Top Controls Container */
         .controls {
             width: 480px;
             margin: 20px auto 15px auto;
@@ -27,7 +26,6 @@
             font-weight: 500;
         }
 
-        /* Chess Board Container */
         .conatiner {
             display: grid;
             border: 2px solid navy;
@@ -51,7 +49,6 @@
             height: 60px;
         }
 
-        /* Sibling Selector (~): Targets the board when checkbox inside .controls is checked */
         .controls:has(#toggle-color:checked) ~ .conatiner .white {
             background-color: yellow;
         }
@@ -63,13 +60,11 @@
 </head>
 <body>
 
-    <!-- Controls placed at the top -->
     <div class="controls">
         <input type="checkbox" id="toggle-color">
         <label for="toggle-color">Change Color </label>
     </div>
 
-    <!-- Chess Board placed below -->
     <div class="conatiner">
         <div class="white"></div>
         <div class="black"></div>
