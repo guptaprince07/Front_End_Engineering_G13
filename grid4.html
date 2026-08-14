@@ -3,32 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chess Board</title>
     <style>
-        .conatiner{
+        /* Top Controls Container */
+        .controls {
+            width: 480px;
+            margin: 20px auto 15px auto;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: sans-serif;
+        }
+
+        #toggle-color {
+            accent-color: green;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+
+        .controls label {
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        /* Chess Board Container */
+        .conatiner {
             display: grid;
             border: 2px solid navy;
             box-shadow: 5px 5px 4px lightslategrey;
             width: 480px;
             height: 480px;
             margin: auto;
-            grid-template-columns: repeat(8,1fr);
-            grid-template-rows: repeat(8,1fr);
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
         }
-        .black{
+
+        .black {
             background-color: black;
             width: 60px;
             height: 60px;
         }
-        .white{
+
+        .white {
             background-color: white;
             width: 60px;
             height: 60px;
         }
+
+        /* Sibling Selector (~): Targets the board when checkbox inside .controls is checked */
+        .controls:has(#toggle-color:checked) ~ .conatiner .white {
+            background-color: yellow;
+        }
+
+        .controls:has(#toggle-color:checked) ~ .conatiner .black {
+            background-color: maroon;
+        }
     </style>
 </head>
 <body>
-    <body>
+
+    <!-- Controls placed at the top -->
+    <div class="controls">
+        <input type="checkbox" id="toggle-color">
+        <label for="toggle-color">Change Color </label>
+    </div>
+
+    <!-- Chess Board placed below -->
     <div class="conatiner">
         <div class="white"></div>
         <div class="black"></div>
@@ -95,6 +136,6 @@
         <div class="black"></div>
         <div class="white"></div>
     </div>
-</body>
+
 </body>
 </html>
