@@ -16,7 +16,8 @@
             height: 100%;
             background: red;
             position: relative;
-            animation: mymoves 5s linear forwards;
+            animation: mymoves 5s 1 linear forwards;
+            /* forwards doesn't remove the previous frame when going in next frame */
         }
         @keyframes mymoves{
             0%   {width: 0%; }
