@@ -5,34 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container{
-            width: 400px;
-            margin: auto;
-            border: 2px solid navy;
-            height: 20px;
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            padding-top: 40px;
+            font-family: sans-serif;
         }
-        .sq{
-            width: 0%;
+        .controls {
+            order: 3;
+            width: 400px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .container {
+            order: 1;
+            width: 400px;
+            height: 20px;
+            border: 2px solid navy;
+        }
+        .load {
+            order: 2;
+            width: 400px;
+        }
+        .sq {
             height: 100%;
             background: red;
-            position: relative;
-            animation: mymoves 5s 1 linear forwards;
-            /* forwards doesn't remove the previous frame when going in next frame */
+            animation: mymoves 5s linear forwards;
+            animation-play-state: paused;
         }
-        @keyframes mymoves{
-            0%   {width: 0%; }
-            25%  {width: 25%; }
-            50%  {width: 50%; }
-            75%  {width: 75%; }
-            100% {width: 100%; }
+        .controls:has(#start-btn:checked) ~ .container .sq {
+            animation-play-state: running;
         }
-        .load{
-            width: 400px;
-            margin: auto;
+        @keyframes mymoves {
+            from { width: 0%; }
+            to   { width: 100%; }
+        }
+        #start-btn {
+            accent-color: green;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+        .controls label {
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
+    <div class="controls">
+        <input type="checkbox" id="start-btn">
+        <label for="start-btn">Start Loading</label>
+    </div>
     <div class="container">
         <div class="sq"></div>
     </div>
