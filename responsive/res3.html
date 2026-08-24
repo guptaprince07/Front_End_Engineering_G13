@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        .features-container{
+            width:100%;
+        }
+        .card{
+            background:lightblue;
+            padding:20px;
+            margin-bottom:15px;
+            border:1px solid navy;
+            text-align:center;
+            width:100%;
+        }
+        @media(min-width:600px){
+            .card{
+                float:left;
+                width:45;
+                margin-right:4%;
+            }
+        }
+        @media(min-width:1024px){
+            .features-container{
+                display:flex;
+                justify-content:center;
+            }
+            .card{
+                width:20%;
+                margin-right:4%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="features-container">
+        <div class="card">Feature-card 1</div>
+        <div class="card">Feature-card 2</div>
+        <div class="card">Feature -card 3</div>
+        <div class="card">Feature-card 4</div>
+    </div>
+</body>
+</html>
