@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .hero{
+            height: 30vh;
+            background-color: blue;
+            color: white;
+            text-align:center;
+            padding: 20px;
+        }
+        .hero h1{
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .hero p{
+            font-size: 14px;
+        }
+        @media(min-width:768px){
+            .hero{
+                height: 30vh;
+                text-align: left;
+                padding: 40px;
+            }
+            .hero h1{
+                font-size: 48px;
+            }
+            .hero p{
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>Welcome to My Website</h1>
+        <p>Discover amazing content built with responsive design principle</p>
+    </header>
+</body>
+</html>
