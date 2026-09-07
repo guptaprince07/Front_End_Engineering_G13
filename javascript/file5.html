@@ -6,14 +6,54 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="displayArea"></div>
     <script>
+        // var count = parseInt(prompt("How many items do you want in the list?"));
+        // document.write("<ol>");
+        // for (var i = 1; i <= count; i++) {
+        //     var item = prompt("Enter name for item " + i + ":");
+        //     document.write("<li>" + item + "</li>");
+        // }
+        // document.write("</ol>");
         var count = parseInt(prompt("How many items do you want in the list?"));
-        document.write("<ol>");
+        var choice = prompt(
+            "Choose a numbering style:\n" +
+            "1 - Numbers (1, 2, 3)\n" +
+            "2 - Uppercase Letters (A, B, C)\n" +
+            "3 - Lowercase Letters (a, b, c)\n" +
+            "4 - Uppercase Roman (I, II, III)\n" +
+            "5 - Lowercase Roman (i, ii, iii)"
+        );
+        var listType = "1";
+
+        switch (choice) {
+            case "1":
+                listType = "1";
+                break;
+            case "2":
+                listType = "A";
+                break;
+            case "3":
+                listType = "a";
+                break;
+            case "4":
+                listType = "I";
+                break;
+            case "5":
+                listType = "i";
+                break;
+            default:
+                alert("Invalid choice! Defaulting to standard numbers (1).");
+                listType = "1";
+        }
+        var listHTML = "<ol type='" + listType + "'>";
+
         for (var i = 1; i <= count; i++) {
             var item = prompt("Enter name for item " + i + ":");
-            document.write("<li>" + item + "</li>");
+            listHTML += "<li>" + item + "</li>";
         }
-        document.write("</ol>");
+        listHTML += "</ol>";
+        document.getElementById("displayArea").innerHTML = listHTML;
     </script>
 </body>
 </html>
