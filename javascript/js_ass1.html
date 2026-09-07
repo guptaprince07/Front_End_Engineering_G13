@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" style="border-collapse: collapse;">
+        <script>
+            for (var r = 0; r < 8; r++) {
+                document.write("<tr>");
+                for (var c = 0; c < 8; c++) {
+                    var color = (r + c) % 2 == 0 ? "black" : "white";
+                    document.write("<td width='50' height='50' bgcolor='" + color + "'></td>");
+                }
+                document.write("</tr>");
+            }
+        </script>
+    </table>
+</body>
+</html>
