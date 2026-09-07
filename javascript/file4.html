@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="numbers-container"></div>
+
+    <script>
+        // const container = document.getElementById('numbers-container');
+        // let i = 1;
+
+        // while (i <= 20) {
+        //     const span = document.createElement('span');
+        //     span.textContent = i + ' ';
+        //     span.style.fontSize = '22px';
+
+        //     if (i % 2 === 0) {
+        //         span.style.color = 'blue';
+        //     } else {
+        //         span.style.color = 'red';
+        //     }
+        //     container.appendChild(span);
+        //     i++;
+        // }
+        let num=1;
+        while (num <= 20) {
+            if (num % 2 == 0) {
+                document.write("<span style='font-size:22px;color:blue;'>" + num + "&nbsp;</span>");
+            } else {
+                document.write("<span style='font-size:22px;color:red;'>" + num + "&nbsp;</span>");
+            }
+            num++;
+        }
+    </script>
+
+</body>
+</html>
