@@ -43,8 +43,8 @@
                 listType = "i";
                 break;
             default:
-                alert("Invalid choice! Defaulting to standard numbers (1).");
-                listType = "1";
+                alert("Invalid choice!");
+                throw new Error();
         }
         var listHTML = "<ol type='" + listType + "'>";
 
