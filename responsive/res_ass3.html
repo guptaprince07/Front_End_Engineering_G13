@@ -1,0 +1,135 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            position: fixed;
+            width:100%;
+            height: 40px;
+            border: 2px solid navy;
+            background-color: aquamarine;
+        }
+        .signin, .signup{
+            display: none;
+        }
+        @media (min-width:450px) and (max-width:1500px){
+            .signin, .signup{
+                display: flex;
+            }
+            .hamburger{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    <div class="hamburger">
+        <span class="link">Home</span>
+        <span class="link">Signin</span>
+        <span class="link">Signup</span>
+        <span class="link">About</span>
+</div>
+</body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style6.css">
+    <title>Document</title>
+    <style>
+        * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding-top: 56px;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 56px;
+        background-color: lightblue;
+        display: flex;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .signin, .signup {
+        display: none;
+      }
+      @media (min-width: 450px) and (max-width: 1500px){
+        .signin, .signup {
+            display: flex;
+        }
+
+        .hamburger{
+            display: none;
+        }
+      }
+
+      .nav-item {
+        flex: 1;
+        color: #123;
+        text-align: center;
+        padding: 18px 8px;
+      }
+
+      .menu-button {
+        display: none;
+        flex: 1;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        padding: 16px;
+      }
+
+      .menu-button span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        margin: 4px auto;
+        background-color: #123;
+      }
+
+      @media (max-width: 600px) {
+        .account-item {
+          display: none;
+        }
+
+        .menu-button {
+          display: block;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <nav class="navbar" aria-label="Main navigation">
+      <span class="nav-item">Home</span>
+      <span class="nav-item">About</span>
+      <span class="nav-item">Contact</span>
+      <span class="nav-item account-item">Sign Up</span>
+      <span class="nav-item account-item">Sign In</span>
+      <button class="menu-button" type="button" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </body>
+</html>
