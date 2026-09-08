@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function showMsg(name){
+            name=document.getElementById(`username`).value;
+            document.write(`<h2>Welcome ${name}!</h2>`)
+        }
+    </script>
+    <input type="text" id="username">
+    <button type="button" onClick="showMsg()">Click me</button>
+</body>
+</html>
