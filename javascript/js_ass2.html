@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        function showMsg() {
+            var name = document.getElementById('username').value;
+            var pass = document.getElementById('password').value;
+            var output = document.getElementById('output');
+            if (name === "Alok" && pass === "1234") {
+                output.innerHTML = "<h1>Welcome " + name + "</h1>";
+            } else {
+                output.innerHTML = "<h1>Invalid username or password</h1>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+    <label for="username">Username:</label>
+    <input type="text" id="username"><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password"><br><br>
+    <button type="button" onclick="showMsg()">Click me</button>
+</body>
+</html>
