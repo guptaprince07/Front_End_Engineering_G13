@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(){
+            console.log(arguments);
+            let sum=0;
+            for(let i=0;i<arguments.length;i++){
+            sum+=arguments[i];
+        }
+            return sum;
+        }
+        let res=add(11,20,21,30,31,40);
+        console.log('sum is :'+res);
+    </script>
+</body>
+</html>
