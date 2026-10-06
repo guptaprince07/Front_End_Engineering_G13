@@ -4,14 +4,21 @@ function Welcome() {
     // function show(){
     //     // document.getElementById('showMsg').innerText='Welcome to React';
     // }
-    function show(uname){
-        // document.getElementById('showMsg').innerText='Welcome to React';
+    // function show(uname){
+    //     // document.getElementById('showMsg').innerText='Welcome to React';
+    //     document.getElementById('showMsg').innerText=`Welcome ${uname}!`;
+    // }
+
+    function show(){
+        let uname=document.getElementById('username').value;
         document.getElementById('showMsg').innerText=`Welcome ${uname}!`;
     }
   return (
     <div>
       {/* <button onClick={show}>ENTER</button> */}
-      <button onClick={()=>show('Krishna')}>ENTER</button>
+      Enter Username:<input type='text' id='username'/>
+      <button onClick={show}>ENTER</button>
+      {/* <button onClick={()=>show('Krishna')}>ENTER</button> */}
       <h1 id='showMsg'></h1>
     </div>
   )
