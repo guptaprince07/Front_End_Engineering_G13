@@ -1,0 +1,41 @@
+/* Horizontal scrollbar fix karne ke liye global rule */
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 30px; 
+  background-color: grey; 
+  padding: 15px 30px; 
+  font-family: system-ui, -apple-system, sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+body {
+  margin: 0;
+  padding-top: 60px;
+}
+
+.navbar span {
+  color: white; 
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out; 
+}
+
+.navbar span:hover {
+  color: whitesmoke; 
+  background-color: rgba(255, 255, 255, 0.1); 
+}
