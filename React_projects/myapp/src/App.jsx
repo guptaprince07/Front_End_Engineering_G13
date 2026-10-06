@@ -1,13 +1,16 @@
 import Navbar from "./components/Navbar"
-import Content from "./components/Content"
+import './app.css'
+
+
 
 function App() {
+  
+
   return (
     <>
     <Navbar>
      </Navbar>
-
-    <Content></Content>
+    
     </>
   )
 }

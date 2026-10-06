@@ -1,41 +1,85 @@
-/* Horizontal scrollbar fix karne ke liye global rule */
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.navbar {
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  gap: 30px; 
-  background-color: grey; 
-  padding: 15px 30px; 
-  font-family: system-ui, -apple-system, sans-serif;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+html, body, #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents unwanted window-level scrollbars */
 }
 
-
-body {
-  margin: 0;
-  padding-top: 60px;
+.container {
+    display: grid;
+    /* 3 Columns matching your layout design */
+    grid-template-columns: 3fr 10fr 5fr;
+    /* Row 1: Navbar (120px), Row 2: Content filling the remaining height */
+    grid-template-rows: 120px 1fr; 
+    height: 100vh;
+    width: 100vw;
 }
 
-.navbar span {
-  color: white; 
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 6px 12px;
-  border-radius: 4px;
-  transition: all 0.2s ease-in-out; 
+/* Navbar / Top Box */
+.box {
+    grid-column: 1 / 4; /* Spans all 3 columns */
+    grid-row: 1;
+    background-color: gray;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.navbar span:hover {
-  color: whitesmoke; 
-  background-color: rgba(255, 255, 255, 0.1); 
+/* Sidebar (Left) - Stretches down to the bottom now */
+.boxe {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: aqua;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Scrollable Content Area */
+.boxer {
+    grid-column: 2 / 4; /* Spans across columns 2 and 3 */
+    grid-row: 2 / 3;    /* Fills the remaining vertical space */
+    background-color: brown;
+    color: white;       
+    overflow-y: auto;   /* Enables independent scrolling for long text */
+    display: block;
+    min-height: 0;
+    text-align: justify;
+    padding: 20px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+/* Navbar internal styling */
+.box nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 350px;
+}
+
+.box nav span {
+    font-size: 18px;
+    cursor: pointer;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 6px 12px;
+}
+
+.box nav span:hover {
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.5);
 }
