@@ -1,8 +1,8 @@
 // import Navbar from "./components/Navbar"
 // import './app.css'
 //import image1 from './assets/images/image1.jpg'
-
-import Welcome from "./components/Welcome"
+//import Welcome from "./components/Welcome"
+import Add from "./components/Add"
 
 function App() {
   return (
@@ -10,7 +10,8 @@ function App() {
     {/* <Navbar>
      </Navbar>  */}
      {/* <img src="/public/images/image1.jpg" alt='image1'/> */}
-     <Welcome></Welcome>
+     {/* <Welcome></Welcome> */}
+     <Add></Add>
     </>
   )
 }
