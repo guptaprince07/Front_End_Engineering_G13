@@ -1,0 +1,33 @@
+.login-container {
+  padding: 30px;
+  font-family: sans-serif;
+}
+
+.login-form {
+  display: flex;
+  flexDirection: column;
+  gap: 12px;
+  width: 320px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group input {
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.login-btn {
+  width: 70px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.login-message {
+  margin-top: 20px;
+  font-weight: bold;
+}
