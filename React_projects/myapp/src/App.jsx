@@ -24,7 +24,9 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
+
 import React from 'react'
+import Navbar1 from "./components/Navbar1";
 
 function App() {
   return (
@@ -35,6 +37,7 @@ function App() {
     // </div>
     <>
     <BrowserRouter>
+    <Navbar1/>
     <Routes>
       <Route path="/" element ={<Home/>} />
       <Route path="/about" element ={<About/>} />
