@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar"
-// import './app.css'
+import Result from "./components/Result"
+import './app.css'
 //import image1 from './assets/images/image1.jpg'
 //import Welcome from "./components/Welcome"
 //import Add from "./components/Add"
@@ -7,11 +8,12 @@ import Navbar from "./components/Navbar"
 function App() {
   return (
     <>
-    <Navbar>
-     </Navbar> 
+    {/* <Navbar>
+     </Navbar>  */}
      {/* <img src="/public/images/image1.jpg" alt='image1'/> */}
      {/* <Welcome></Welcome> */}
      {/* <Add></Add> */}
+     <Result></Result>
     </>
   )
 }

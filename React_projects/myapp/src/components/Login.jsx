@@ -6,9 +6,9 @@ function Signin() {
   const [message, setMessage] = useState('');
 
   const handleLogin = (e) => {
-    e.preventDefault(); // Prevents the page from refreshing on form submit
+    e.preventDefault(); 
 
-    // Check credentials as per assignment requirement
+   
     if (username === 'Ram' && password === 'Ram123') {
       setMessage('Welcome Ram!');
     } else {
