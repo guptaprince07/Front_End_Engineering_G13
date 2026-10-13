@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function showmsg(){
+        fn=myform.fname.value;
+        ln=myform.lname.value;
+        document.getElementById("welcome_msg").innerText=`Welcome ${fn} ${ln} !`;
+    }
+</script>
+<body>
+    <form name="myform">
+        <h2 id="welcome_msg"></h2>
+        First name: <input type="text" id="fname"><br>
+        Last name: <input type="text" id="lname"><br>
+        <button type="button" onclick="showmsg()" >Click Me</button>
+    </form>
+</body>
+</html>
