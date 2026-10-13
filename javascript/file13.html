@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    
+</head>
+<body>
+    <p id = "jsondata"></p>
+    <script type="module">
+        import userdata from './users.json' with {type:"json"};
+        let uname = JSON.stringify(userdata.username);
+        let pwd = JSON.stringify(userdata.password);
+        document.getElementById("jsondata").innerHTML = 'Username is $(uname)<br>password is $(pwd)';
+    </script>
+    
+</body>
+</html>
