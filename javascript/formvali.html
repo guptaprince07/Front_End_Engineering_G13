@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <script>
     function validateForm(){
-        var uname=document.getElementById("username").value;
-        var desc=document.getElementById("description").value;
-        var p1=document.getElementById("pwd1").value;
-        var p2=document.getElementById("pwd2").value;
-
-        if(uname==' '|| desc==' ' || p1==' '||p2==' '){
-            alert("Please fill all required fields");
+       
+        var uname = document.getElementById("Username").value;
+        var desc = document.getElementById("description").value;
+        var p1 = document.getElementById("pwd1").value;
+        var p2 = document.getElementById("pwd2").value;
+        
+     
+        if (uname == '' || desc == '' || p1 == '' || p2 == ''){
+            alert("Please fill all the required fields");
             return false;
         }
-        else{
-            if(p1!=p2){
-                alert("Password & Retype password must be same!");
+        else {
+           
+            if (p1 != p2){
+                alert("Password and re-type password must be same");
                 return false;
             }
         }
+        return true; 
     }
-
     </script>
 </head>
 <body>
-    <form action="success.html" method="get" name "Form1" onsubmit="return validation()">
-        Username: <input type="text" name="Username" id="username"><br>
-        Description: <textarea cols="30" rows="2" name="description" id="'description"></textarea><br>
-        Password: <input type="password" name="pwd1" id="pdw1"><br>
-        Retype password: <input type="password" name="pwd2" id="pwd2"><br>
-        <button type="submit" name="submit">Submit</button>
+    <form action="sucess.html" method="GET" name="Form1" onSubmit="return validateForm()">
+        Username: <input type="text" name="Username" id="Username"><br>
+        Description: <textarea cols="30" rows="2" name="Description" id="description"></textarea><br>
+        Password: <input type="password" name="pwd1" id="pwd1"><br>
+        Retype: <input type="password" name="pwd2" id="pwd2"><br>
+        <button type="submit" name="submit">SUBMIT</button>
     </form>
 </body>
 </html>
