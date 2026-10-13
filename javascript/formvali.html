@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+    function validateForm(){
+        var uname=document.getElementById("username").value;
+        var desc=document.getElementById("description").value;
+        var p1=document.getElementById("pwd1").value;
+        var p2=document.getElementById("pwd2").value;
+
+        if(uname==' '|| desc==' ' || p1==' '||p2==' '){
+            alert("Please fill all required fields");
+            return false;
+        }
+        else{
+            if(p1!=p2){
+                alert("Password & Retype password must be same!");
+                return false;
+            }
+        }
+    }
+
+    </script>
 </head>
 <body>
     <form action="success.html" method="get" name "Form1" onsubmit="return validation()">
