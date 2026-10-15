@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function reges() {
+            let uname = loginform.uname.value;
+            let p1 = loginform.pwd.value;
+            let rp1 = loginform.rpwd.value;
+            if (p1!== rp1) {
+                alert("Passwords do not match!");
+                return false;
+            }
+            localStorage.setItem("storedUsername", uname);
+            localStorage.setItem("storedPassword", p1);
+            return true; }
+    </script>
+</head>
+<body>
+    <h2 id = "Sign In "></h2>
+   <form name = "loginform" action = "re.html" onsubmit="return reges()">
+    Username: <input type="text" name="uname"><br>
+    Password:<input type="password" name="pwd"><br>
+    Re Type Password:<input type="password" name="rpwd"><br>
+    <input type="submit" value="SUBMIT">
+   </form>
+</body>
+</html>
