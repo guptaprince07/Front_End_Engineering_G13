@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <script>
+        localStorage.user=JSON.stringify({name:"Ram",password:"12345"});
+
+        let userdata=JSON.parse(localStorage.user);
+        function validate(){
+            let u=loginform.uname.value;
+            let p=loginform.pwd.value;
+            if (u == userdata.name && p ==userdata.password)
+    return true;
+else {
+    document.getElementById("showError").innerText = "Invalid Credentials";
+    return false;
+}
+        }
+    </script>
 </head>
 <body>
    <h2 id = "showError"></h2>
-   <form name = "loginform" action = "calculator.html" onsubmit="return validate()">
+   <form name = "loginform" action = "success.html" onsubmit="return validate()">
     Username: <input type="text" name="uname"><br>
     Password:<input type="password" name="pwd"><br>
     <input type="submit" value="SUBMIT">
