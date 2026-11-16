@@ -2,69 +2,104 @@ import React, { useState } from 'react';
 import './AgeGraph.css';
 
 function AgeGraph() {
-  const [name, setName] = useState('');
-  const [age, setAge] = useState('');
-  const [people, setPeople] = useState([
-    { name: 'Alice', age: 25 },
-    { name: 'Bob', age: 40 },
-    { name: 'Charlie', age: 60 }
-  ]);
+  const [ages, setAges] = useState({
+    person1: '',
+    person2: '',
+    person3: ''
+  });
+  
+  // State to track whether the graph should be visible
+  const [showGraph, setShowGraph] = useState(false);
 
-  // Handle adding a new person and age
-  const handleAddPerson = (e) => {
-    e.preventDefault();
-    if (!age || isNaN(age)) return;
-
-    setPeople([...people, { name: name || `Person ${people.length + 1}`, age: Number(age) }]);
-    setName('');
-    setAge('');
+  const handleAgeChange = (person, value) => {
+    setAges({
+      ...ages,
+      [person]: value
+    });
   };
 
   return (
     <div className="graph-container">
       <h3>Person Age Bar Graph</h3>
 
-      {/* Form to enter data */}
-      <form onSubmit={handleAddPerson} className="age-form">
-        <input 
-          type="text" 
-          placeholder="Enter Name (optional)" 
-          value={name} 
-          onChange={(e) => setName(e.target.value)} 
-        />
-        <input 
-          type="number" 
-          placeholder="Enter Age" 
-          value={age} 
-          onChange={(e) => setAge(e.target.value)} 
-          required 
-          min="1"
-          max="120"
-        />
-        <button type="submit">Add Age</button>
-      </form>
+      {/* Separate input text fields to enter age */}
+      <div className="inputs-section">
+        <div className="input-row">
+          <label>Person 1 Age:</label>
+          <input 
+            type="number" 
+            value={ages.person1} 
+            onChange={(e) => handleAgeChange('person1', e.target.value)} 
+            placeholder="Enter age"
+          />
+        </div>
 
-      {/* Graph Area */}
-      <div className="bar-graph">
-        {people.map((person, index) => {
-          // Multiply age by a scaling factor (e.g., 5px per year) to control bar length
-          const barWidth = person.age * 5; 
+        <div className="input-row">
+          <label>Person 2 Age:</label>
+          <input 
+            type="number" 
+            value={ages.person2} 
+            onChange={(e) => handleAgeChange('person2', e.target.value)} 
+            placeholder="Enter age"
+          />
+        </div>
 
-          return (
-            <div key={index} className="bar-row">
-              <span className="person-label">{person.name} ({person.age} yrs)</span>
-              
-              {/* Disabled text field acting as the bar graph element */}
+        <div className="input-row">
+          <label>Person 3 Age:</label>
+          <input 
+            type="number" 
+            value={ages.person3} 
+            onChange={(e) => handleAgeChange('person3', e.target.value)} 
+            placeholder="Enter age"
+          />
+        </div>
+      </div>
+
+      {/* Button to show/hide the graph */}
+      <button onClick={() => setShowGraph(!showGraph)} className="toggle-btn">
+        {showGraph ? 'Hide Graph' : 'Show Graph'}
+      </button>
+
+      {/* Graph Area - only appears when showGraph is true */}
+      {showGraph && (
+        <div className="bar-graph-section">
+          <hr className="divider" />
+          <div className="bar-graph">
+            <div className="bar-row">
+              <span className="person-label">Person 1</span>
               <input 
                 type="text" 
                 disabled 
                 className="disabled-bar"
-                style={{ width: `${barWidth}px` }}
+                style={{ width: `${(Number(ages.person1) || 0) * 4}px` }}
+                value={ages.person1 ? `${ages.person1} yrs` : ''}
               />
             </div>
-          );
-        })}
-      </div>
+
+            <div className="bar-row">
+              <span className="person-label">Person 2</span>
+              <input 
+                type="text" 
+                disabled 
+                className="disabled-bar"
+                style={{ width: `${(Number(ages.person2) || 0) * 4}px` }}
+                value={ages.person2 ? `${ages.person2} yrs` : ''}
+              />
+            </div>
+
+            <div className="bar-row">
+              <span className="person-label">Person 3</span>
+              <input 
+                type="text" 
+                disabled 
+                className="disabled-bar"
+                style={{ width: `${(Number(ages.person3) || 0) * 4}px` }}
+                value={ages.person3 ? `${ages.person3} yrs` : ''}
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
