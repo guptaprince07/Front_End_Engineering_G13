@@ -19,33 +19,47 @@
 // }
 // export default App
 
-import {BrowserRouter, Routes ,Route} from "react-router-dom";
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
+// import {BrowserRouter, Routes ,Route} from "react-router-dom";
+// import Home from './pages/Home';
+// import About from './pages/About';
+// import Contact from './pages/Contact';
 
 
-import React from 'react'
-import Navbar1 from "./components/Navbar1";
-import StudentInfo from "./components/StudentInfo";
+// import React from 'react'
+// import Navbar1 from "./components/Navbar1";
+// import StudentInfo from "./components/StudentInfo";
+// function App() {
+//   return (
+//     // <div>
+//     //   {/* <Home/>
+//     //   <About/>
+//     //   <Contact/> */}
+//     // </div>
+//     <>
+//     <BrowserRouter>
+//     <Navbar1/>
+//     <Routes>
+//       <Route path="/" element ={<Home/>} />
+//       <Route path="/about" element ={<About/>} />
+//       <Route path="/contact" element ={<Contact/>} />
+//     </Routes>
+//     </BrowserRouter>
+//     </>
+//   )
+// }
+
+// export default App
+
+import React from 'react';
+import AgeGraph from './components/AgeGraph'; // Adjust path if it's inside a components folder (e.g., './components/AgeGraph')
+
 function App() {
   return (
-    // <div>
-    //   {/* <Home/>
-    //   <About/>
-    //   <Contact/> */}
-    // </div>
-    <>
-    <BrowserRouter>
-    <Navbar1/>
-    <Routes>
-      <Route path="/" element ={<Home/>} />
-      <Route path="/about" element ={<About/>} />
-      <Route path="/contact" element ={<Contact/>} />
-    </Routes>
-    </BrowserRouter>
-    </>
-  )
+    <div className="App">
+      {/* Displaying the Age Graph component */}
+      <AgeGraph />
+    </div>
+  );
 }
 
-export default App
+export default App;

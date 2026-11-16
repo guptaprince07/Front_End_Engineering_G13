@@ -1,0 +1,45 @@
+.graph-container {
+  padding: 20px;
+  font-family: sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.age-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.age-form input, .age-form button {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.bar-graph {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.person-label {
+  min-width: 130px;
+  font-weight: 500;
+  text-align: right;
+}
+
+/* The disabled text field acting as the green bar */
+.disabled-bar {
+  background-color: #2e7d32 !important; /* Green color */
+  border: none;
+  height: 24px;
+  border-radius: 4px;
+  /* Ensures standard cursor style even when disabled */
+  cursor: default; 
+}
