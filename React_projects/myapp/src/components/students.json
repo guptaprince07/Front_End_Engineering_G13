@@ -1,0 +1,16 @@
+[
+    {
+        "ID": "12345",
+        "Name": "Ram Kumar",
+        "Gender": "Male",
+        "Class": "G4",
+        "Email": "rk007@gmail.com"
+    },
+    {
+        "ID": "23145",
+        "Name": "Alok Gupta",
+        "Gender": "Male",
+        "Class": "G4",
+        "Email": "alok199@gmail.com"
+    }
+]

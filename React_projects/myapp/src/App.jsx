@@ -27,7 +27,7 @@ import Contact from './pages/Contact';
 
 import React from 'react'
 import Navbar1 from "./components/Navbar1";
-
+import StudentInfo from "./components/StudentInfo";
 function App() {
   return (
     // <div>
