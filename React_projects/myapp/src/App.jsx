@@ -78,12 +78,12 @@ import React from 'react';
 
 // import Toggle from './components/TextChange'; 
 
-import Counter from './components/Count';
-
+// import Counter from './components/Count';
+import ArrayData from './components/ArrayData';
 function App() {
   return (
     <div>
-      <Counter />
+      <ArrayData />
     </div>
   );
 }
