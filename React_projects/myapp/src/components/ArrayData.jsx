@@ -31,21 +31,23 @@
 // }
 import { useState } from "react";
 
-function Arrays() {
-  const obj = [
-    { id: 0, name: "Alok", city: "Noida", email: "alok123@gmail.com" },
-    { id: 1, name: "Suresh", city: "Delhi", email: "suresh123@gmail.com" },
-    { id: 2, name: "Swati", city: "Lucknow", email: "swati123@gmail.com" },
-  ];
+const obj = [
+  { id: 0, name: "Alok", city: "Noida", email: "alok123@gmail.com" },
+  { id: 1, name: "Suresh", city: "Delhi", email: "suresh123@gmail.com" },
+  { id: 2, name: "Swati", city: "Lucknow", email: "swati123@gmail.com" },
+];
 
+function Arrays() {
   const [data, setData] = useState(obj);
 
   function removeElement(id) {
-  let filterData = data.filter((element) => {
-    return element.id !== id;
-  });
-  setData(filterData);
-}
+    const filterData = data.filter((element) => element.id !== id);
+    setData(filterData);
+  }
+
+  function showAllData() {
+    setData(obj);
+  }
 
   return (
     <div>
@@ -57,6 +59,8 @@ function Arrays() {
           </h3>
         );
       })}
+
+      <button onClick={showAllData}>Show All Data</button>
     </div>
   );
 }
