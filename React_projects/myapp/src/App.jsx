@@ -76,12 +76,14 @@ import React from 'react';
 
 // export default App;
 
-import Toggle from './components/TextChange'; 
+// import Toggle from './components/TextChange'; 
+
+import Counter from './components/Count';
 
 function App() {
   return (
     <div>
-      <Toggle />
+      <Counter />
     </div>
   );
 }
