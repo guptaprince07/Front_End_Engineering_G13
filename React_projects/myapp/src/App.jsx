@@ -76,12 +76,12 @@ import React from 'react';
 
 // export default App;
 
-import TextChange from './components/TextChange'; 
+import Toggle from './components/TextChange'; 
 
 function App() {
   return (
     <div>
-      <TextChange />
+      <Toggle />
     </div>
   );
 }
