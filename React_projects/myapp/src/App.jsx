@@ -64,12 +64,24 @@ import React from 'react';
 
 // export default App;
 
-import GreetingButton from './components/Hello';
+// import GreetingButton from './components/Hello';
+
+// function App() {
+//   return (
+//     <div>
+//       <GreetingButton />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import Textchange from './components/TextChange'; 
 
 function App() {
   return (
     <div>
-      <GreetingButton />
+      <Textchange />
     </div>
   );
 }
