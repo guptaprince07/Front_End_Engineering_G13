@@ -40,9 +40,12 @@ function Arrays() {
 
   const [data, setData] = useState(obj);
 
-//   function removeElement(id) {
-//     setData(data.filter((element) => element.id !== id));
-//   }
+  function removeElement(id) {
+  let filterData = data.filter((element) => {
+    return element.id !== id;
+  });
+  setData(filterData);
+}
 
   return (
     <div>
