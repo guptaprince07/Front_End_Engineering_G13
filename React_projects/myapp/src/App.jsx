@@ -51,13 +51,25 @@
 // export default App
 
 import React from 'react';
-import AgeGraph from './components/AgeGraph'; // Adjust path if it's inside a components folder (e.g., './components/AgeGraph')
+// import AgeGraph from './components/AgeGraph'; // Adjust path if it's inside a components folder (e.g., './components/AgeGraph')
+
+// function App() {
+//   return (
+//     <div className="App">
+//       {/* Displaying the Age Graph component */}
+//       <AgeGraph />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import GreetingButton from './components/Hello';
 
 function App() {
   return (
-    <div className="App">
-      {/* Displaying the Age Graph component */}
-      <AgeGraph />
+    <div>
+      <GreetingButton />
     </div>
   );
 }
